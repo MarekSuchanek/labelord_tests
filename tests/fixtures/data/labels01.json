@@ -1,0 +1,86 @@
+[
+  {
+    "id": 493652351,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/bug",
+    "name": "bug",
+    "color": "ee0701",
+    "default": true
+  },
+  {
+    "id": 537866912,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/core%20idea",
+    "name": "core idea",
+    "color": "b495a9",
+    "default": false
+  },
+  {
+    "id": 493652352,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/duplicate",
+    "name": "duplicate",
+    "color": "cccccc",
+    "default": true
+  },
+  {
+    "id": 493652354,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/enhancement",
+    "name": "enhancement",
+    "color": "84b6eb",
+    "default": true
+  },
+  {
+    "id": 543486014,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/experience",
+    "name": "experience",
+    "color": "bfdadc",
+    "default": false
+  },
+  {
+    "id": 537866058,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/extension%20idea",
+    "name": "extension idea",
+    "color": "b495a9",
+    "default": false
+  },
+  {
+    "id": 493652355,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/help%20wanted",
+    "name": "help wanted",
+    "color": "128A0C",
+    "default": true
+  },
+  {
+    "id": 493652357,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/invalid",
+    "name": "invalid",
+    "color": "cccccc",
+    "default": true
+  },
+  {
+    "id": 537867476,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/on%20hold",
+    "name": "on hold",
+    "color": "cccccc",
+    "default": false
+  },
+  {
+    "id": 537867278,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/optimization",
+    "name": "optimization",
+    "color": "84b6eb",
+    "default": false
+  },
+  {
+    "id": 493652359,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/question",
+    "name": "question",
+    "color": "cc317c",
+    "default": true
+  },
+  {
+    "id": 493652361,
+    "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/wontfix",
+    "name": "wontfix",
+    "color": "cccccc",
+    "default": true
+  }
+]

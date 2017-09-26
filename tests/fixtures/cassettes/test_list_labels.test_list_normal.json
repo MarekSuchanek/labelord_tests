@@ -1,0 +1,56 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python"
+        },
+        "method": "GET",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo1/labels?per_page=100&page=1"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "[{\"id\": 493652351, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/bug\", \"name\": \"bug\", \"color\": \"ee0701\", \"default\": true}, {\"id\": 537866912, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/core%20idea\", \"name\": \"core idea\", \"color\": \"b495a9\", \"default\": false}, {\"id\": 493652352, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/duplicate\", \"name\": \"duplicate\", \"color\": \"cccccc\", \"default\": true}, {\"id\": 493652354, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/enhancement\", \"name\": \"enhancement\", \"color\": \"84b6eb\", \"default\": true}, {\"id\": 543486014, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/experience\", \"name\": \"experience\", \"color\": \"bfdadc\", \"default\": false}, {\"id\": 537866058, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/extension%20idea\", \"name\": \"extension idea\", \"color\": \"b495a9\", \"default\": false}, {\"id\": 493652355, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/help%20wanted\", \"name\": \"help wanted\", \"color\": \"128A0C\", \"default\": true}, {\"id\": 493652357, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/invalid\", \"name\": \"invalid\", \"color\": \"cccccc\", \"default\": true}, {\"id\": 537867476, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/on%20hold\", \"name\": \"on hold\", \"color\": \"cccccc\", \"default\": false}, {\"id\": 537867278, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/optimization\", \"name\": \"optimization\", \"color\": \"84b6eb\", \"default\": false}, {\"id\": 493652359, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/question\", \"name\": \"question\", \"color\": \"cc317c\", \"default\": true}, {\"id\": 493652361, \"url\": \"https://api.github.com/repos/MarekSuchanek/repo1/labels/wontfix\", \"name\": \"wontfix\", \"color\": \"cccccc\", \"default\": true}]"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Sat, 16 Sep 2017 19:38:33 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "2068",
+          "Status": "200 OK",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4999",
+          "X-RateLimit-Reset": "1505594313",
+          "Cache-Control": "private, max-age=60, s-maxage=60",
+          "Vary": "Accept, Authorization, Cookie, X-GitHub-OTP",
+          "ETag": "\"ea516516b2809d9d3bba9fc3617cfb71\"",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "repo",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.030605",
+          "X-GitHub-Request-Id": "C72C:213D:5BA79A8:C2BFFA9:59BD7DB8"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels?per_page=100&page=1"
+      },
+      "recorded_at": "2017-09-16T19:38:33"
+    }
+  ],
+  "recorded_with": "betamax/0.8.0"
+}

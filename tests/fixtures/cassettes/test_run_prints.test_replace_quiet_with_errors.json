@@ -1,0 +1,505 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python"
+        },
+        "method": "GET",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo1/labels?per_page=100&page=1"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "[{\"id\":695848171,\"url\":\"https://api.github.com/repos/MarekSuchanek/repo1/labels/label1\",\"name\":\"label1\",\"color\":\"FFAA00\",\"default\":false},{\"id\":695848172,\"url\":\"https://api.github.com/repos/MarekSuchanek/repo1/labels/label3\",\"name\":\"label3\",\"color\":\"00FF33\",\"default\":false},{\"id\":696462166,\"url\":\"https://api.github.com/repos/MarekSuchanek/repo1/labels/label4\",\"name\":\"label4\",\"color\":\"771077\",\"default\":false}]"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 06:10:10 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "412",
+          "Status": "200 OK",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4931",
+          "X-RateLimit-Reset": "1505803939",
+          "Cache-Control": "private, max-age=60, s-maxage=60",
+          "Vary": "Accept, Authorization, Cookie, X-GitHub-OTP",
+          "ETag": "\"43ddf0ae669ff6f68440cb10c582ddfc\"",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "repo",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.065623",
+          "X-GitHub-Request-Id": "1CAF:213E:A0E2C09:14A168ED:59C0B4C2"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels?per_page=100&page=1"
+      },
+      "recorded_at": "2017-09-19T06:10:10"
+    },
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\": \"label2\", \"color\": \"CCAAFF\"}"
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python",
+          "Content-Length": "37"
+        },
+        "method": "POST",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo1/labels"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"id\":696462223,\"url\":\"https://api.github.com/repos/MarekSuchanek/repo1/labels/label2\",\"name\":\"label2\",\"color\":\"CCAAFF\",\"default\":false}"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 06:10:11 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "136",
+          "Status": "201 Created",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4930",
+          "X-RateLimit-Reset": "1505803939",
+          "Cache-Control": "private, max-age=60, s-maxage=60",
+          "Vary": "Accept, Authorization, Cookie, X-GitHub-OTP",
+          "ETag": "\"62c33ff9b5efd836c54644d122cf159e\"",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "",
+          "Location": "https://api.github.com/repos/MarekSuchanek/repo1/labels/label2",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.043072",
+          "X-GitHub-Request-Id": "1CAF:213E:A0E2C54:14A16973:59C0B4C2"
+        },
+        "status": {
+          "code": 201,
+          "message": "Created"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels"
+      },
+      "recorded_at": "2017-09-19T06:10:11"
+    },
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\": \"label7\", \"color\": \"00FFCCAA\"}"
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python",
+          "Content-Length": "39"
+        },
+        "method": "POST",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo1/labels"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"message\":\"Validation Failed\",\"errors\":[{\"resource\":\"Label\",\"code\":\"invalid\",\"field\":\"color\"}],\"documentation_url\":\"https://developer.github.com/v3/issues/labels/#create-a-label\"}"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 06:10:11 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "180",
+          "Status": "422 Unprocessable Entity",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4929",
+          "X-RateLimit-Reset": "1505803939",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.030728",
+          "X-GitHub-Request-Id": "1CAF:213E:A0E2C8E:14A169E5:59C0B4C3"
+        },
+        "status": {
+          "code": 422,
+          "message": "Unprocessable Entity"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels"
+      },
+      "recorded_at": "2017-09-19T06:10:11"
+    },
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\": \"label3\", \"color\": \"00FFXX\"}"
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python",
+          "Content-Length": "37"
+        },
+        "method": "PATCH",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo1/labels/label3"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"message\":\"Validation Failed\",\"errors\":[{\"resource\":\"Label\",\"code\":\"invalid\",\"field\":\"color\"}],\"documentation_url\":\"https://developer.github.com/v3/issues/labels/#update-a-label\"}"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 06:10:11 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "180",
+          "Status": "422 Unprocessable Entity",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4928",
+          "X-RateLimit-Reset": "1505803939",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.032729",
+          "X-GitHub-Request-Id": "1CAF:213E:A0E2CC3:14A16A55:59C0B4C3"
+        },
+        "status": {
+          "code": 422,
+          "message": "Unprocessable Entity"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/label3"
+      },
+      "recorded_at": "2017-09-19T06:10:11"
+    },
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python",
+          "Content-Length": "0"
+        },
+        "method": "DELETE",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo1/labels/label4"
+      },
+      "response": {
+        "body": {
+          "encoding": null,
+          "string": ""
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 06:10:11 GMT",
+          "Content-Type": "application/octet-stream",
+          "Status": "204 No Content",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4927",
+          "X-RateLimit-Reset": "1505803939",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.241603",
+          "X-GitHub-Request-Id": "1CAF:213E:A0E2CFA:14A16ABE:59C0B4C3"
+        },
+        "status": {
+          "code": 204,
+          "message": "No Content"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo1/labels/label4"
+      },
+      "recorded_at": "2017-09-19T06:10:12"
+    },
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python"
+        },
+        "method": "GET",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo2/labels?per_page=100&page=1"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "[{\"id\":695848189,\"url\":\"https://api.github.com/repos/MarekSuchanek/repo2/labels/label2\",\"name\":\"label2\",\"color\":\"CCAAFF\",\"default\":false}]"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 06:10:12 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "138",
+          "Status": "200 OK",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4926",
+          "X-RateLimit-Reset": "1505803939",
+          "Cache-Control": "private, max-age=60, s-maxage=60",
+          "Vary": "Accept, Authorization, Cookie, X-GitHub-OTP",
+          "ETag": "\"0ca4efdd73fd1eaba6af4d8d3923c11b\"",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "repo",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.028494",
+          "X-GitHub-Request-Id": "1CAF:213E:A0E2D9C:14A16BA4:59C0B4C3"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo2/labels?per_page=100&page=1"
+      },
+      "recorded_at": "2017-09-19T06:10:12"
+    },
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\": \"label1\", \"color\": \"FFAA00\"}"
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python",
+          "Content-Length": "37"
+        },
+        "method": "POST",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo2/labels"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"id\":696462232,\"url\":\"https://api.github.com/repos/MarekSuchanek/repo2/labels/label1\",\"name\":\"label1\",\"color\":\"FFAA00\",\"default\":false}"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 06:10:12 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "136",
+          "Status": "201 Created",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4925",
+          "X-RateLimit-Reset": "1505803939",
+          "Cache-Control": "private, max-age=60, s-maxage=60",
+          "Vary": "Accept, Authorization, Cookie, X-GitHub-OTP",
+          "ETag": "\"f827f1c1e34e952fd362594ba47f604d\"",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "",
+          "Location": "https://api.github.com/repos/MarekSuchanek/repo2/labels/label1",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.037303",
+          "X-GitHub-Request-Id": "1CAF:213E:A0E2DCE:14A16C47:59C0B4C4"
+        },
+        "status": {
+          "code": 201,
+          "message": "Created"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo2/labels"
+      },
+      "recorded_at": "2017-09-19T06:10:12"
+    },
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\": \"label3\", \"color\": \"00FFXX\"}"
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python",
+          "Content-Length": "37"
+        },
+        "method": "POST",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo2/labels"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"message\":\"Validation Failed\",\"errors\":[{\"resource\":\"Label\",\"code\":\"invalid\",\"field\":\"color\"}],\"documentation_url\":\"https://developer.github.com/v3/issues/labels/#create-a-label\"}"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 06:10:12 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "180",
+          "Status": "422 Unprocessable Entity",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4924",
+          "X-RateLimit-Reset": "1505803939",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.034919",
+          "X-GitHub-Request-Id": "1CAF:213E:A0E2E10:14A16CAF:59C0B4C4"
+        },
+        "status": {
+          "code": 422,
+          "message": "Unprocessable Entity"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo2/labels"
+      },
+      "recorded_at": "2017-09-19T06:10:12"
+    },
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\": \"label7\", \"color\": \"00FFCCAA\"}"
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python",
+          "Content-Length": "39"
+        },
+        "method": "POST",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo2/labels"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"message\":\"Validation Failed\",\"errors\":[{\"resource\":\"Label\",\"code\":\"invalid\",\"field\":\"color\"}],\"documentation_url\":\"https://developer.github.com/v3/issues/labels/#create-a-label\"}"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 06:10:12 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "180",
+          "Status": "422 Unprocessable Entity",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4923",
+          "X-RateLimit-Reset": "1505803939",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.031650",
+          "X-GitHub-Request-Id": "1CAF:213E:A0E2E48:14A16D15:59C0B4C4"
+        },
+        "status": {
+          "code": 422,
+          "message": "Unprocessable Entity"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo2/labels"
+      },
+      "recorded_at": "2017-09-19T06:10:12"
+    },
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python"
+        },
+        "method": "GET",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repo7/labels?per_page=100&page=1"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"message\":\"Not Found\",\"documentation_url\":\"https://developer.github.com/v3\"}"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 06:10:12 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "77",
+          "Status": "404 Not Found",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4922",
+          "X-RateLimit-Reset": "1505803939",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "repo",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.024967",
+          "X-GitHub-Request-Id": "1CAF:213E:A0E2E80:14A16D75:59C0B4C4"
+        },
+        "status": {
+          "code": 404,
+          "message": "Not Found"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repo7/labels?per_page=100&page=1"
+      },
+      "recorded_at": "2017-09-19T06:10:13"
+    }
+  ],
+  "recorded_with": "betamax/0.8.0"
+}

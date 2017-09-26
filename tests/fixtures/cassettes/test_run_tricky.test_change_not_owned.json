@@ -1,0 +1,105 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python"
+        },
+        "method": "GET",
+        "uri": "https://api.github.com/repos/requests/requests/labels?per_page=100&page=1"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "[{\"id\":44501256,\"url\":\"https://api.github.com/repos/requests/requests/labels/Breaking%20API%20Change\",\"name\":\"Breaking API Change\",\"color\":\"eb6420\",\"default\":false},{\"id\":117744,\"url\":\"https://api.github.com/repos/requests/requests/labels/Bug\",\"name\":\"Bug\",\"color\":\"e10c02\",\"default\":false},{\"id\":191274,\"url\":\"https://api.github.com/repos/requests/requests/labels/Contributor%20Friendly\",\"name\":\"Contributor Friendly\",\"color\":\"0b02e1\",\"default\":false},{\"id\":78002701,\"url\":\"https://api.github.com/repos/requests/requests/labels/Do%20Not%20Merge\",\"name\":\"Do Not Merge\",\"color\":\"e11d21\",\"default\":false},{\"id\":136616769,\"url\":\"https://api.github.com/repos/requests/requests/labels/Documentation\",\"name\":\"Documentation\",\"color\":\"fad8c7\",\"default\":false},{\"id\":76800,\"url\":\"https://api.github.com/repos/requests/requests/labels/Feature%20Request\",\"name\":\"Feature Request\",\"color\":\"02e10c\",\"default\":false},{\"id\":67760318,\"url\":\"https://api.github.com/repos/requests/requests/labels/Fixed\",\"name\":\"Fixed\",\"color\":\"5319e7\",\"default\":false},{\"id\":615414998,\"url\":\"https://api.github.com/repos/requests/requests/labels/GAE%20Support\",\"name\":\"GAE Support\",\"color\":\"fbca04\",\"default\":false},{\"id\":60620163,\"url\":\"https://api.github.com/repos/requests/requests/labels/Minion%20Seal%20of%20Approval\",\"name\":\"Minion Seal of Approval\",\"color\":\"207de5\",\"default\":false},{\"id\":44501249,\"url\":\"https://api.github.com/repos/requests/requests/labels/Needs%20BDFL%20Input\",\"name\":\"Needs BDFL Input\",\"color\":\"fbca04\",\"default\":false},{\"id\":136589914,\"url\":\"https://api.github.com/repos/requests/requests/labels/Needs%20Info\",\"name\":\"Needs Info\",\"color\":\"e11d21\",\"default\":false},{\"id\":298537994,\"url\":\"https://api.github.com/repos/requests/requests/labels/Needs%20More%20Information\",\"name\":\"Needs More Information\",\"color\":\"fef2c0\",\"default\":false},{\"id\":536793543,\"url\":\"https://api.github.com/repos/requests/requests/labels/needs%20rebase\",\"name\":\"needs rebase\",\"color\":\"d4c5f9\",\"default\":false},{\"id\":44501305,\"url\":\"https://api.github.com/repos/requests/requests/labels/Not%20Ready%20To%20Merge\",\"name\":\"Not Ready To Merge\",\"color\":\"e11d21\",\"default\":false},{\"id\":117745,\"url\":\"https://api.github.com/repos/requests/requests/labels/Planned\",\"name\":\"Planned\",\"color\":\"e102d8\",\"default\":false},{\"id\":60669570,\"url\":\"https://api.github.com/repos/requests/requests/labels/Please%20Review\",\"name\":\"Please Review\",\"color\":\"fef2c0\",\"default\":false},{\"id\":167537670,\"url\":\"https://api.github.com/repos/requests/requests/labels/Propose%20Close\",\"name\":\"Propose Close\",\"color\":\"f7c6c7\",\"default\":false},{\"id\":162780722,\"url\":\"https://api.github.com/repos/requests/requests/labels/Question/Not%20a%20bug\",\"name\":\"Question/Not a bug\",\"color\":\"777777\",\"default\":false},{\"id\":44501218,\"url\":\"https://api.github.com/repos/requests/requests/labels/Ready%20To%20Merge\",\"name\":\"Ready To Merge\",\"color\":\"009800\",\"default\":false}]"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 17:45:46 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "2895",
+          "Status": "200 OK",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4991",
+          "X-RateLimit-Reset": "1505846237",
+          "Cache-Control": "private, max-age=60, s-maxage=60",
+          "Vary": "Accept, Authorization, Cookie, X-GitHub-OTP",
+          "ETag": "\"2d684eb6efdaf2e43c17e27d2d713f5a\"",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "repo",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.030038",
+          "X-GitHub-Request-Id": "04AD:213F:AB87039:1803362E:59C157CA"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://api.github.com/repos/requests/requests/labels?per_page=100&page=1"
+      },
+      "recorded_at": "2017-09-19T17:45:46"
+    },
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\": \"SWAG\", \"color\": \"FF66CC\"}"
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python",
+          "Content-Length": "35"
+        },
+        "method": "POST",
+        "uri": "https://api.github.com/repos/requests/requests/labels"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"message\":\"Not Found\",\"documentation_url\":\"https://developer.github.com/v3/issues/labels/#create-a-label\"}"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Tue, 19 Sep 2017 17:45:47 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "107",
+          "Status": "404 Not Found",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4990",
+          "X-RateLimit-Reset": "1505846237",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.042951",
+          "X-GitHub-Request-Id": "04AD:213F:AB87080:18033690:59C157CA"
+        },
+        "status": {
+          "code": 404,
+          "message": "Not Found"
+        },
+        "url": "https://api.github.com/repos/requests/requests/labels"
+      },
+      "recorded_at": "2017-09-19T17:45:47"
+    }
+  ],
+  "recorded_with": "betamax/0.8.0"
+}
