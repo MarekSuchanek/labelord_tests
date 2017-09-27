@@ -5,9 +5,12 @@ Usage
 -----
 
  1. Copy the tests files to your project.
- 2. In your virtual environment, install pytest: ``python -m pip install click requests betamax flexmock pytest``.
- 3. Run ``python -m pytest tests/``.
+ 2. Use the skeleton of ``labelord.py`` for implementation*.
+ 3. In your virtual environment, install pytest: ``python -m pip install click requests betamax flexmock pytest``.
+ 4. Run ``python -m pytest tests/``.
 
+
+* You need to pass the context to click in same manner because it is being used in tests for injecting resources to your implementation.
 
 License
 -------
