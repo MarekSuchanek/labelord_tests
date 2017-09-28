@@ -5,12 +5,15 @@ Usage
 -----
 
  1. Copy the tests files to your project.
- 2. Use the skeleton of ``labelord.py`` for implementation*.
+ 2. Use the skeleton of ``labelord.py`` for implementation (see notes).
  3. In your virtual environment, install pytest: ``python -m pip install click requests betamax flexmock pytest``.
  4. Run ``python -m pytest tests/``.
 
 
-* You need to pass the context to click in same manner because it is being used in tests for injecting resources to your implementation.
+Notes:
+
+* You need to pass the context to click in same manner as in skeleton because it is being used in tests for injecting resources to your implementation.
+* You need to request repositories and labels with page size set explicitly to 100 and then paging (even if you need page 1) -> ``?per_page=100&page=1``
 
 License
 -------
