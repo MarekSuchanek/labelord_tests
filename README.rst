@@ -18,7 +18,7 @@ Notes:
 
 ::
 
-   $ LABELORD_SESSION_SPY=off
+   $ export LABELORD_SESSION_SPY=off
    $ python -m pytest pytest tests/
    $ unset LABELORD_SESSION_SPY
    $ python -m pytest pytest tests/
