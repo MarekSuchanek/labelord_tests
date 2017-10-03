@@ -49,7 +49,8 @@ def invoker(betamax_session):
 
     def invoker_inner(*args, isolated=False, session_expectations=None):
         session_mock = flexmock(betamax_session or requests.Session())
-        if session_expectations is not None:
+        if os.environ.get('LABELORD_SESSION_SPY', '').lower() != 'off' and \
+           session_expectations is not None:
             for what, count in session_expectations.items():
                 session_mock.should_call(what).times(count)
         runner = CliRunner()

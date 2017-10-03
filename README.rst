@@ -12,8 +12,17 @@ Usage
 
 Notes:
 
-* You need to pass the context to click in same manner as in skeleton because it is being used in tests for injecting resources to your implementation.
-* You need to request repositories and labels with page size set explicitly to 100 and then paging (even if you need page 1) -> ``?per_page=100&page=1``
+* You need to pass the context to click in same manner as in skeleton because it is being used in tests for injecting resources to  your implementation.
+* You need to request repositories and labels with page size set explicitly to 100 and then paging (even if you need page 1) ->  ``?per_page=100&page=1``
+* Tests use spy on session to check correct count of requests per type. Sometimes it can shadow real problem and you will see something like ``flexmock.MethodCallError: get() expected to be called exactly 2 times, called 0 times`` instead of failing assertion or thrown exception. To disable this checks you need to set environment variable ``LABELORD_SESSION_SPY`` to value ``off``. Example for Linux:
+
+::
+
+   $ LABELORD_SESSION_SPY=off
+   $ python -m pytest pytest tests/
+   $ unset LABELORD_SESSION_SPY
+   $ python -m pytest pytest tests/
+
 
 License
 -------
