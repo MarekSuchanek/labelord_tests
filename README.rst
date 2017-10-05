@@ -23,6 +23,13 @@ Notes:
    $ unset LABELORD_SESSION_SPY
    $ python -m pytest pytest tests/
 
+* For easier work, you can use various pytest options (see `documentation <https://docs.pytest.org/en/latest/usage.html>`__), for example:
+
+  * ``--maxfail`` - to set number fails until it stops testing
+  * ``-k`` - keyword expression for filtering tests
+  * ``tests/test_file.py::test_func`` - give exact file as an arguments (or fully qualified test name)
+
+
 
 Frequent errors
 ----------------
@@ -56,6 +63,7 @@ This is error in Betamax library. You must edit Betamax Exception. Edit in (virt
 
  def __repr__(self):
      return 'BetamaxError("%s")' % self.message
+
 
 
 License
