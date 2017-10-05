@@ -23,11 +23,40 @@ Notes:
    $ unset LABELORD_SESSION_SPY
    $ python -m pytest pytest tests/
 
-* For easier work, you can use various pytest options (see `documentation <https://docs.pytest.org/en/latest/usage.html>`__), for example:
 
-  * ``--maxfail`` - to set number fails until it stops testing
-  * ``-k`` - keyword expression for filtering tests
-  * ``tests/test_file.py::test_func`` - give exact file as an arguments (or fully qualified test name) 
+Frequent errors
+----------------
+
+Error with bad request
+***********************
+
+::
+
+ <Result BetamaxError("A request was made that could not be handled.
+ A request was made to https://api.github.com/*****
+ The settings on the cassette are -
+   record_mode: none
+   match_options {'uri', 'method'}.\n",)>.exit_code
+
+
+That happen if you do some requests, that tests don't expect. You can find list of allowed request urls in ``tests/fixtures/casettes/*``
+
+
+Betamax Error
+***************
+
+::
+
+<[AttributeError("'BetamaxError' object has no attribute 'message'") raised in repr()] Result object at 0x7f74dbc864e0>.exit_code
+
+
+This is error in Betamax library. You must edit Betamax Exception. Edit in (virtual environment): ``__venv__/lib/python*.*/site-packages/betamax/exceptions.py`` and delete lines:
+
+::
+
+ def __repr__(self):
+     return 'BetamaxError("%s")' % self.message
+
 
 License
 -------
