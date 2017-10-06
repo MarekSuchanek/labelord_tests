@@ -68,7 +68,8 @@ def test_change_not_owned(invoker, utils):
 def test_help(invoker_norec):
     # There must be standard click help describing options
     # and commands (you should write description for each)
-    # It should look like this:
+    #
+    # It could look like this (types and help texts may differ):
     # Usage: labelord.py [OPTIONS] COMMAND [ARGS]...
     #
     # Options:
@@ -96,7 +97,8 @@ def test_help(invoker_norec):
 def test_help_list_labels(invoker_norec):
     # There must be standard click help describing options
     # and commands (you should write description for each)
-    # It should look like this:
+    #
+    # It could look like this (help text may differ):
     # Usage: labelord.py list_labels [OPTIONS] REPOSITORY
     #
     # Listing labels of desired repository.
@@ -112,7 +114,8 @@ def test_help_list_labels(invoker_norec):
 def test_help_list_repos(invoker_norec):
     # There must be standard click help describing options
     # and commands (you should write description for each)
-    # It should look like this:
+    #
+    # It could look like this (help text may differ):
     # Usage: labelord.py list_repos [OPTIONS]
     #
     # Listing accessible repositories.
@@ -128,7 +131,7 @@ def test_help_list_repos(invoker_norec):
 def test_help_list_run(invoker_norec):
     # There must be standard click help describing options
     # and commands (you should write description for each)
-    # It should look like this:
+    # It could look like this (types and help texts may differ):
     # Usage: labelord.py run [OPTIONS] <update|replace>
     #
     # Run labels processing.
