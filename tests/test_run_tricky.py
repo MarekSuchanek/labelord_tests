@@ -134,7 +134,7 @@ def test_help_list_run(invoker_norec):
     # Run labels processing.
     #
     # Options:
-    #   -t, --template-repo TEXT  Repository which serves as labels template.
+    #   -r, --template-repo TEXT  Repository which serves as labels template.
     #   -d, --dry-run             Proceed with just dry run.
     #   -v, --verbose             Really exhaustive output.
     #   -q, --quiet               No output at all.
@@ -143,7 +143,7 @@ def test_help_list_run(invoker_norec):
     invocation = invoker_norec('run', '--help')
 
     assert invocation.result.exit_code == 0
-    assert '-t, --template-repo' in invocation.result.output
+    assert '-r, --template-repo' in invocation.result.output
     assert '-d, --dry-run' in invocation.result.output
     assert '-v, --verbose' in invocation.result.output
     assert '-q, --quiet' in invocation.result.output
@@ -165,7 +165,7 @@ def test_precedence_template_repo(invoker, utils):
     # repo4 is empty and has higher precedence than repo3
     # in the config
     invocation = invoker('-c', utils.config('config_templaterepo'),
-                         'run', 'update', '-t', 'MarekSuchanek/repo4',
+                         'run', 'update', '-r', 'MarekSuchanek/repo4',
                          session_expectations={
                              'get': 3,
                              'post': 0,
