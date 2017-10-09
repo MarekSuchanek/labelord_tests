@@ -49,8 +49,8 @@ Error with bad request
 That happen if you do some requests, that tests don't expect. You can find list of allowed request urls in ``tests/fixtures/casettes/*``
 
 
-Betamax Error
-***************
+Betamax Error: object has no attribute 'message'
+************************************************
 
 ::
 
@@ -64,6 +64,11 @@ This is error in Betamax library. You must edit Betamax Exception. Edit in (virt
  def __repr__(self):
      return 'BetamaxError("%s")' % self.message
 
+
+Betamax Error: A request was made that could not be handled
+***********************************************************
+
+The tests are written in a way that thay anticipate a series of HTTP requests happening during a test. Any extra requests are "forbidden". The motivation for this is not you to have tied hands, this is happening because all HTTP coomunication is faked in the tests. When in doubt, inspect the appropriate json file in ``tests/fixtures/cassettes``.
 
 
 License
