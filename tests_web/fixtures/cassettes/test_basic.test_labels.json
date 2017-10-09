@@ -1,0 +1,56 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python"
+        },
+        "method": "GET",
+        "uri": "https://api.github.com/repos/MarekSuchanek/pyplayground/labels?per_page=100&page=1"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "[{\"id\":687090714,\"url\":\"https://api.github.com/repos/MarekSuchanek/pyplayground/labels/Bug\",\"name\":\"Bug\",\"color\":\"FF0000\",\"default\":false},{\"id\":687091499,\"url\":\"https://api.github.com/repos/MarekSuchanek/pyplayground/labels/Idea\",\"name\":\"Idea\",\"color\":\"23FB89\",\"default\":false}]"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Wed, 27 Sep 2017 19:12:55 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "279",
+          "Status": "200 OK",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4998",
+          "X-RateLimit-Reset": "1506542662",
+          "Cache-Control": "private, max-age=60, s-maxage=60",
+          "Vary": "Accept, Authorization, Cookie, X-GitHub-OTP",
+          "ETag": "\"b3d3b6995a2538600d72283aa388b9d4\"",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "repo",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.032702",
+          "X-GitHub-Request-Id": "0DBE:7DF0:592012:11B7F22:59CBF836"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/pyplayground/labels?per_page=100&page=1"
+      },
+      "recorded_at": "2017-09-27T19:12:55"
+    }
+  ],
+  "recorded_with": "betamax/0.8.0"
+}

@@ -6,11 +6,13 @@ Usage
 
  1. Copy the tests files to your project.
  2. Use the skeleton of ``labelord.py`` for implementation (see notes).
- 3. In your virtual environment, install pytest: ``python -m pip install click requests betamax flexmock pytest``.
- 4. Run ``python -m pytest tests/``.
+ 3. In your virtual environment, install pytest: ``python -m pip install click requests betamax flexmock pytest flask``.
+ 4. Run ``python -m pytest tests_cli/`` to run tests for CLI app (from previous task).
+ 4. Run ``python -m pytest tests_web/`` to run tests for WEB app.
 
 
-Notes:
+Notes and hints
+---------------
 
 * You need to pass the context to click in same manner as in skeleton because it is being used in tests for injecting resources to  your implementation.
 * You need to request repositories and labels with page size set explicitly to 100 and then paging (even if you need page 1) ->  ``?per_page=100&page=1``
@@ -19,9 +21,9 @@ Notes:
 ::
 
    $ export LABELORD_SESSION_SPY=off
-   $ python -m pytest pytest tests/
+   $ python -m pytest pytest tests_web/
    $ unset LABELORD_SESSION_SPY
-   $ python -m pytest pytest tests/
+   $ python -m pytest pytest tests_web/
 
 * For easier work, you can use various pytest options (see `documentation <https://docs.pytest.org/en/latest/usage.html>`__), for example:
 
@@ -29,7 +31,9 @@ Notes:
   * ``-k`` - keyword expression for filtering tests
   * ``tests/test_file.py::test_func`` - give exact file as an arguments (or fully qualified test name)
 
+* Methods ``inject_session`` and ``reload_config`` of ``LabelordWeb`` are used by tests to provide special session for testing the communication with GitHub just as in previous task via click context. If ``inject_session`` is not called, create own new session. In the new click subcommand ``run_server`` pass the session from context (as in other subcommands) to the web app.
 
+* You should be able to use the CLI application. Your web application should not cause an error (exit with exit code > 0 and error message) unless is being used and badly configured.
 
 Frequent errors
 ----------------

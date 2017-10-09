@@ -1,0 +1,54 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\": \"Won't fix\", \"color\": \"888888\"}"
+        },
+        "headers": {
+          "Authorization": "token <TOKEN>",
+          "User-Agent": "Python",
+          "Content-Length": "40"
+        },
+        "method": "POST",
+        "uri": "https://api.github.com/repos/MarekSuchanek/repocribro/labels"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"message\":\"Validation Failed\",\"errors\":[{\"resource\":\"Label\",\"code\":\"already_exists\",\"field\":\"name\"}],\"documentation_url\":\"https://developer.github.com/v3/issues/labels/#create-a-label\"}"
+        },
+        "headers": {
+          "Server": "GitHub.com",
+          "Date": "Fri, 29 Sep 2017 17:15:45 GMT",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "186",
+          "Status": "422 Unprocessable Entity",
+          "X-RateLimit-Limit": "5000",
+          "X-RateLimit-Remaining": "4987",
+          "X-RateLimit-Reset": "1506708364",
+          "X-OAuth-Scopes": "repo",
+          "X-Accepted-OAuth-Scopes": "",
+          "X-GitHub-Media-Type": "github.v3; format=json",
+          "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Security-Policy": "default-src 'none'",
+          "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "deny",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Runtime-rack": "0.029333",
+          "X-GitHub-Request-Id": "39CC:7DED:1574397:2963510:59CE7FC0"
+        },
+        "status": {
+          "code": 422,
+          "message": "Unprocessable Entity"
+        },
+        "url": "https://api.github.com/repos/MarekSuchanek/repocribro/labels"
+      },
+      "recorded_at": "2017-09-29T17:15:45"
+    }
+  ],
+  "recorded_with": "betamax/0.8.0"
+}
