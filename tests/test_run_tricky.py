@@ -160,7 +160,8 @@ def test_help_list_run(invoker_norec, isolated):
     invocation = invoker_norec('run', '--help', isolated=isolated)
 
     assert invocation.result.exit_code == 0
-    assert '-r, --template-repo' in invocation.result.output
+    assert ('-r, --template-repo' in invocation.result.output or
+            '-t, --template-repo' in invocation.result.output)  # old mistake
     assert '-d, --dry-run' in invocation.result.output
     assert '-v, --verbose' in invocation.result.output
     assert '-q, --quiet' in invocation.result.output
@@ -186,7 +187,8 @@ def test_precedence_template_repo(invoker, utils):
     # repo4 is empty and has higher precedence than repo3
     # in the config
     invocation = invoker('-c', utils.config('config_templaterepo'),
-                         'run', 'update', '-r', 'MarekSuchanek/repo4',
+                         'run', 'update', '--template-repo',
+                         'MarekSuchanek/repo4',
                          session_expectations={
                              'get': 3,
                              'post': 0,
