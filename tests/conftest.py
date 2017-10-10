@@ -1,5 +1,6 @@
 import sys, os
 import betamax
+import json
 import pytest
 import requests
 
@@ -23,8 +24,19 @@ class GitHubMatcher(betamax.BaseMatcher):
     def _has_user_agent(request):
         return request.headers.get('User-Agent', None) is not None
 
+    @staticmethod
+    def _match_body_json(request, recorded_request):
+        if request.body is None:
+            return recorded_request['body']['string'] == ''
+
+        data1 = json.loads(recorded_request['body']['string'])
+        data2 = json.loads(request.body.decode('utf-8'))
+        return data1 == data2
+
     def match(self, request, recorded_request):
-        return self._has_correct_token(request) and self._has_user_agent(request)
+        return self._has_correct_token(request) and \
+               self._has_user_agent(request) and \
+               self._match_body_json(request, recorded_request)
 
 
 betamax.Betamax.register_request_matcher(GitHubMatcher)
@@ -34,7 +46,6 @@ with betamax.Betamax.configure() as config:
     config.default_cassette_options['match_requests_on'] = [
         'method',
         'uri',
-        'body',
         'mipyt-github'
     ]
     token = os.environ.get('GITHUB_TOKEN', '<TOKEN>')
