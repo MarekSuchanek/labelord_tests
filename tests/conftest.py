@@ -11,8 +11,32 @@ CONFIGS_PATH = FIXTURES_PATH + '/configs'
 
 sys.path.insert(0, ABS_PATH + '/../')
 
+
+class GitHubMatcher(betamax.BaseMatcher):
+    name = 'mipyt-github'
+
+    @staticmethod
+    def _has_correct_token(request):
+        return request.headers.get('Authorization', '') == 'token thisIsNotRealToken'
+
+    @staticmethod
+    def _has_user_agent(request):
+        return request.headers.get('User-Agent', None) is not None
+
+    def match(self, request, recorded_request):
+        return self._has_correct_token(request) and self._has_user_agent(request)
+
+
+betamax.Betamax.register_request_matcher(GitHubMatcher)
+
 with betamax.Betamax.configure() as config:
     config.cassette_library_dir = CASSETTES_PATH
+    config.default_cassette_options['match_requests_on'] = [
+        'method',
+        'uri',
+        'body',
+        'mipyt-github'
+    ]
     token = os.environ.get('GITHUB_TOKEN', '<TOKEN>')
     if 'GITHUB_TOKEN' in os.environ:
         config.default_cassette_options['record_mode'] = 'once'
