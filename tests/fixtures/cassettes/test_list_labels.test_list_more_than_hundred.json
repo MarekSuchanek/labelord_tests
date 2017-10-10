@@ -33,7 +33,7 @@
           "X-OAuth-Scopes": "repo",
           "X-Accepted-OAuth-Scopes": "repo",
           "X-GitHub-Media-Type": "github.v3; format=json",
-          "Link": "<https://api.github.com/repositories/75464275/labels?per_page=100&page=2>; rel=\"next\", <https://api.github.com/repositories/75464275/labels?per_page=100&page=2>; rel=\"last\"",
+          "Link": "<https://api.github.com/repos/MarekSuchanek/repo3/labels?per_page=100&page=2>; rel=\"next\", <https://api.github.com/repos/MarekSuchanek/repo3/labels?per_page=100&page=2>; rel=\"last\"",
           "Access-Control-Expose-Headers": "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
           "Access-Control-Allow-Origin": "*",
           "Content-Security-Policy": "default-src 'none'",
