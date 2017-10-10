@@ -30,7 +30,7 @@ class GitHubMatcher(betamax.BaseMatcher):
             return recorded_request['body']['string'] == ''
 
         data1 = json.loads(recorded_request['body']['string'])
-        data2 = json.loads(request.body.decode('utf-8'))
+        data2 = json.loads(request.body)
         return data1 == data2
 
     def match(self, request, recorded_request):
