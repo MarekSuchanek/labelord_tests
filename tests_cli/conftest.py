@@ -13,6 +13,12 @@ CONFIGS_PATH = FIXTURES_PATH + '/configs'
 sys.path.insert(0, ABS_PATH + '/../')
 
 
+def decode_if_bytes(obj, encoding='utf-8'):
+    if isinstance(obj, bytes):
+        return obj.decode(encoding)
+    return obj
+
+
 class GitHubMatcher(betamax.BaseMatcher):
     name = 'mipyt-github'
 
@@ -36,7 +42,7 @@ class GitHubMatcher(betamax.BaseMatcher):
             return False
 
         data1 = json.loads(recorded_request['body']['string'])
-        data2 = json.loads(request.body)
+        data2 = json.loads(decode_if_bytes(request.body))
         # Compare JSON data from bodies
         return data1 == data2
 
