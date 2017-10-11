@@ -1,5 +1,6 @@
 import sys, os
 import betamax
+import json
 import pytest
 import requests
 
@@ -11,8 +12,49 @@ CONFIGS_PATH = FIXTURES_PATH + '/configs'
 
 sys.path.insert(0, ABS_PATH + '/../')
 
+
+class GitHubMatcher(betamax.BaseMatcher):
+    name = 'mipyt-github'
+
+    @staticmethod
+    def _has_correct_token(request):
+        # GitHub token should be in headers (thisIsNotRealToken is used in tests)
+        return request.headers.get('Authorization', '') == 'token thisIsNotRealToken'
+
+    @staticmethod
+    def _has_user_agent(request):
+        # GitHub requires User-Agent, requests should do it automatically
+        return request.headers.get('User-Agent', None) is not None
+
+    @staticmethod
+    def _match_body_json(request, recorded_request):
+        if request.body is None:
+            # Tested body is empty so should the recorded
+            return recorded_request['body']['string'] == ''
+        if recorded_request['body']['string'] == '':
+            # Recorded body is empty but tested is not
+            return False
+
+        data1 = json.loads(recorded_request['body']['string'])
+        data2 = json.loads(request.body)
+        # Compare JSON data from bodies
+        return data1 == data2
+
+    def match(self, request, recorded_request):
+        return self._has_correct_token(request) and \
+               self._has_user_agent(request) and \
+               self._match_body_json(request, recorded_request)
+
+
+betamax.Betamax.register_request_matcher(GitHubMatcher)
+
 with betamax.Betamax.configure() as config:
     config.cassette_library_dir = CASSETTES_PATH
+    config.default_cassette_options['match_requests_on'] = [
+        'method',
+        'uri',
+        'mipyt-github'
+    ]
     token = os.environ.get('GITHUB_TOKEN', '<TOKEN>')
     if 'GITHUB_TOKEN' in os.environ:
         config.default_cassette_options['record_mode'] = 'once'
