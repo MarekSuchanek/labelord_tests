@@ -119,7 +119,7 @@ def test_no_signature(client_maker, utils):
             'X-Request-Id': '55eedbbd-6794-4273-9438-af5a69cb24c1'
         }
     )
-    assert result.status == '404 NOT FOUND'
+    assert result.status == '401 UNAUTHORIZED'
 
 
 def test_bad_signature(client_maker, utils):
@@ -139,7 +139,7 @@ def test_bad_signature(client_maker, utils):
             'X-Request-Id': '55eedbbd-6794-4273-9438-af5a69cb24c1'
         }
     )
-    assert result.status == '404 NOT FOUND'
+    assert result.status == '401 UNAUTHORIZED'
 
 
 def test_no_redundant(client_maker, utils):
