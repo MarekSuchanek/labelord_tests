@@ -92,12 +92,13 @@ class Utils:
         }
 
     @classmethod
-    def monkeypatch_betamaxerror(cls):
+    def monkeypatch_betamaxerror(cls, monkeypatch):
+        cls.BETAMAX_ERRORS = 0
         def monkey_init(self, message):
             super(betamax.BetamaxError, self).__init__(message)
             cls.BETAMAX_ERRORS += 1
 
-        betamax.BetamaxError.__init__ = monkey_init
+        monkeypatch.setattr(betamax.BetamaxError, '__init__', monkey_init)
 
 
 @pytest.fixture
@@ -143,7 +144,7 @@ def invoker_norec():
 
 
 @pytest.fixture
-def client_maker(betamax_session, utils):
+def client_maker(betamax_session, utils, monkeypatch):
     def inner_maker(config, own_config_path=False,
                     session_expectations=None):
         from flexmock import flexmock
@@ -154,7 +155,7 @@ def client_maker(betamax_session, utils):
         session_mock = flexmock(betamax_session or requests.Session())
 
         # MonkeyPatch BetamaxError
-        utils.monkeypatch_betamaxerror()
+        utils.monkeypatch_betamaxerror(monkeypatch)
 
         if os.environ.get('LABELORD_SESSION_SPY', '').lower() != 'off' and \
            session_expectations is not None:
