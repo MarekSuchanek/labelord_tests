@@ -172,5 +172,9 @@ def client_maker(betamax_session, utils, monkeypatch):
 
     # Check number of created BetamaxErrors
     # You should catch only your/specific exceptions
-    assert utils.BETAMAX_ERRORS == 0, \
-        'There were some BetamaxErrors (although you might have caught them)!'
+    try:
+        assert utils.BETAMAX_ERRORS == 0, \
+            'There were some BetamaxErrors (although you might ' \
+            'have caught them)!'
+    finally:
+        Utils.BETAMAX_ERRORS = 0
