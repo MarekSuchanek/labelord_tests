@@ -71,6 +71,7 @@ with betamax.Betamax.configure() as config:
 
 
 class Utils:
+    BETAMAX_ERRORS = 0
 
     @staticmethod
     def config(name):
@@ -89,6 +90,14 @@ class Utils:
                 bytes(username + ":" + password, 'ascii')
             ).decode('ascii')
         }
+
+    @classmethod
+    def monkeypatch_betamaxerror(cls):
+        def monkey_init(self, message):
+            super(betamax.BetamaxError, self).__init__(message)
+            cls.BETAMAX_ERRORS += 1
+
+        betamax.BetamaxError.__init__ = monkey_init
 
 
 @pytest.fixture
@@ -134,7 +143,7 @@ def invoker_norec():
 
 
 @pytest.fixture
-def client_maker(betamax_session):
+def client_maker(betamax_session, utils):
     def inner_maker(config, own_config_path=False,
                     session_expectations=None):
         from flexmock import flexmock
@@ -143,6 +152,10 @@ def client_maker(betamax_session):
             config = Utils.config(config)
 
         session_mock = flexmock(betamax_session or requests.Session())
+
+        # MonkeyPatch BetamaxError
+        utils.monkeypatch_betamaxerror()
+
         if os.environ.get('LABELORD_SESSION_SPY', '').lower() != 'off' and \
            session_expectations is not None:
             for what, count in session_expectations.items():
@@ -154,4 +167,9 @@ def client_maker(betamax_session):
         app.reload_config()
         client = app.test_client()
         return client
-    return inner_maker
+    yield inner_maker
+
+    # Check number of created BetamaxErrors
+    # You should catch only your/specific exceptions
+    assert utils.BETAMAX_ERRORS == 0, \
+        'There were some BetamaxErrors (although you might have caught them)!'
