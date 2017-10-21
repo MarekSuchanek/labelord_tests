@@ -11,8 +11,6 @@ CASSETTES_PATH = FIXTURES_PATH + '/cassettes'
 CONFIGS_PATH = FIXTURES_PATH + '/configs'
 DATA_PATH = FIXTURES_PATH + '/data'
 
-sys.path.insert(0, ABS_PATH + '/../')
-
 
 def decode_if_bytes(obj, encoding='utf-8'):
     if isinstance(obj, bytes):
