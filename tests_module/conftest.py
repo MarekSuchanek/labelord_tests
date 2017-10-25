@@ -55,8 +55,8 @@ class Utils:
         return '{} -m {}'.format(self.python, self.cfg['commands']['pip'])
 
     @property
-    def pip_testpypi(self):
-        return '{} -m {}'.format(self.python, self.cfg['commands']['pip_testpypi'])
+    def pip_install_testpypi(self):
+        return '{} -m {}'.format(self.python, self.cfg['commands']['pip_install_testpypi'])
 
     @staticmethod
     def ssh_github(reposlug):
