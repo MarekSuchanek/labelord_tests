@@ -21,6 +21,20 @@ class Utils:
         self.sh = sh
 
     @property
+    def package_info(self):
+        # Run package_info script in virtual env
+        return '{} {}'.format(self.python, os.path.join(FIXTURES_PATH, 'package_info.py'))
+
+    @property
+    def package_name(self):
+        return self.cfg['vars']['testpypiname']
+
+    @property
+    def labelord_entrypoint(self):
+        # Run entrypoint (should be in same path as python in virtual env)
+        return os.path.join(os.path.split(self.python)[0], self.cfg['tests']['entrypoint'])
+
+    @property
     def git(self):
         return self.cfg['commands']['git']
 

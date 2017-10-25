@@ -1,5 +1,4 @@
-import email
-import pkg_resources
+import json
 import tarfile
 import glob
 import os
@@ -80,9 +79,12 @@ def test_package_info(utils, tmpdir, sh):
         'Could not sdist via setup.py: {}'.format(result.stderr)
     tmpdir.chdir()
 
-    # Read package metadata
-    pkg_info = pkg_resources.get_distribution('labelord').get_metadata('PKG-INFO')
-    info_items = email.message_from_string(pkg_info).items()
+    # Read package metadata via external script (in fixtures)
+    result = sh(utils.package_info, utils.package_name)
+    assert result.was_successful, \
+        'Could not retrieve information about package {}'.format(utils.package_name)
+
+    info_items = json.loads(result.stdout)
 
     classifiers = [x[1] for x in info_items if x[0] == 'Classifier']
     assert len(classifiers) > 4, 'Need to have at least 5 classifiers'

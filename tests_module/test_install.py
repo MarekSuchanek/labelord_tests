@@ -41,8 +41,7 @@ def test_install(utils, config, tmpdir, sh, channel):
             'Dependency was not installed: {}'.format(req)
 
     # Run with entrypoint
-    labelord = config['tests']['entrypoint']
-    result = sh(labelord, '--help')
+    result = sh(utils.labelord_entrypoint, '--help')
     assert result.was_successful, \
         'Invoking help via entrypoint failed'
 
