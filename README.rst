@@ -4,11 +4,17 @@ Tests for `MI-PYT <https://github.com/cvut/MI-PYT>`__ Labelord homework
 Usage
 -----
 
- 1. Copy the tests files to your project.
- 2. Use the skeleton of ``labelord.py`` for implementation (see notes).
- 3. In your virtual environment, install pytest: ``python -m pip install click requests betamax flexmock pytest flask``.
- 4. Run ``python -m pytest tests_cli/`` to run tests for CLI app (from previous task).
- 4. Run ``python -m pytest tests_web/`` to run tests for WEB app.
+1. Copy the tests files to your project.
+2. Use the skeleton of ``labelord.py`` for implementation (see notes).
+3. In your virtual environment, install pytest: ``python -m pip install click requests betamax flexmock pytest flask``.
+4. Run ``python -m pytest tests_cli/`` to run tests for CLI app (from previous task).
+5. Run ``python -m pytest tests_web/`` to run tests for WEB app (from previous task).
+6. Run ``python -m pytest tests_module/`` to run tests for module/setup Labelord (it takes longer time).
+  
+   - Before running tests set envvar ``CTU_USERNAME`` (e.g. ``export CTU_USERNAME=suchama4``)
+   - Before running tests set envvar ``LABELORD_REPO`` as you would use for ``git clone`` (e.g. ``export LABELORD_REPO=git@github.com:MarekSuchanek/labelord.git``)
+   - (optionally) Before running tests set envvar ``LABELORD_BRANCH`` (branch or tag, e.g. ``export LABELORD_BRANCH=dev`` or ``export LABELORD_BRANCH=v0.3``), default is ``master``
+   
 
 
 Notes and hints
