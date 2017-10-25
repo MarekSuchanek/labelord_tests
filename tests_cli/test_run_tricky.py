@@ -176,11 +176,11 @@ def test_version(invoker_norec, isolated):
     # Local default config is not required (no token for version is OK)!
     #
     # It should look like this:
-    # labelord, version 0.2
+    # labelord, version 0.3
     invocation = invoker_norec('--version', isolated=isolated)
 
     assert invocation.result.exit_code == 0
-    assert 'labelord, version 0.2' in invocation.result.output
+    assert 'labelord, version 0.3' in invocation.result.output
 
 
 def test_precedence_template_repo(invoker, utils):
