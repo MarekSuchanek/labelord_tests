@@ -110,5 +110,7 @@ def test_package_info(utils, tmpdir, sh):
         'Bad package name in metadata'
     assert values['Version'].startswith('0.3'), \
         'Bad package version in metadata'
-    assert len(values['Keywords'].split(' ')) > 3, \
+    keywords = values['Keywords'].replace(',', ' ').split(' ')
+    keywords = [k for k in keywords if k != '']
+    assert len(keywords) > 3, \
         'Less than 4 package keywords in metadata'
