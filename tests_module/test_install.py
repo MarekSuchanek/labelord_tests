@@ -23,7 +23,7 @@ def test_install(utils, config, tmpdir, sh, channel):
         utils.create_fresh_venv()
 
         testpypiname = config['vars']['testpypiname']
-        result = sh(utils.pip_testpypi, 'install', testpypiname)
+        result = sh(utils.pip_install_testpypi, testpypiname)
         assert result.was_successful, \
             'Could not install "{}" from Test PyPI'.format(testpypiname, result.stderr)
 
