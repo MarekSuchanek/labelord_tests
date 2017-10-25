@@ -14,6 +14,7 @@ Usage
    - Before running tests set envvar ``CTU_USERNAME`` (e.g. ``export CTU_USERNAME=suchama4``)
    - Before running tests set envvar ``LABELORD_REPO`` as you would use for ``git clone`` (e.g. ``export LABELORD_REPO=git@github.com:MarekSuchanek/labelord.git``)
    - (optionally) Before running tests set envvar ``LABELORD_BRANCH`` (branch or tag, e.g. ``export LABELORD_BRANCH=dev`` or ``export LABELORD_BRANCH=v0.3``), default is ``master``
+   - You can check & edit more in ``tests_module/fixtures/test_config.cfg`` (if you have good reason, for example path to ``activate`` is different with your OS)
    
 
 
