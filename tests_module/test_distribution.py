@@ -108,7 +108,7 @@ def test_package_info(utils, tmpdir, sh):
     # Check name, version, keywords as @hroncok mentioned during tutorials
     assert values['Name'] == utils.package_name.replace('_', '-'), \
         'Bad package name in metadata'
-    assert values['Version'] == '0.3', \
+    assert values['Version'].startswith('0.3'), \
         'Bad package version in metadata'
     assert len(values['Keywords'].split(' ')) > 3, \
         'Less than 4 package keywords in metadata'
