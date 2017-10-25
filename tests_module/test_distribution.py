@@ -93,12 +93,24 @@ def test_package_info(utils, tmpdir, sh):
     assert 'Environment :: Web Environment' in classifiers
 
     mandatory = ['Author', 'Author-email', 'License', 'Name', 'Summary',
-                 'Description', 'Keywords']
+                 'Description', 'Keywords', 'Version']
+    values = {k: '' for k in mandatory}
     for m in mandatory:
         found = False
         for item in info_items:
             if item[0] == m:
+                values[m] = item[1]
                 found = True
                 assert len(item[1]) > 0, 'Metadata {} is empty'.format(m)
                 break
         assert found, 'Metadata {} is not present'.format(m)
+
+    # Check name, version, keywords as @hroncok mentioned during tutorials
+    assert values['Name'] == utils.package_name.replace('_', '-'), \
+        'Bad package name in metadata'
+    assert values['Version'].startswith('0.3'), \
+        'Bad package version in metadata'
+    keywords = values['Keywords'].replace(',', ' ').split(' ')
+    keywords = [k for k in keywords if k != '']
+    assert len(keywords) > 3, \
+        'Less than 4 package keywords in metadata'
