@@ -37,7 +37,7 @@ def test_install(utils, config, tmpdir, sh, channel):
 
     reqs = config['tests']['requirements'].split(' ')
     for req in reqs:
-        assert req in result.outerr, \
+        assert req in result.outerr or req.lower() in result.outerr, \
             'Dependency was not installed: {}'.format(req)
 
     # Run with entrypoint
