@@ -66,7 +66,8 @@ def test_install(utils, config, tmpdir, sh, channel):
 
     # Remove exported envvars affecting tests
     for e in utils.get_set('envvars'):
-        os.unsetenv(e)
+        if e in os.environ:
+            del os.environ[e]
     # Run tests
     test_suites = config['tests']['tests'].split(' ')
     for test_suite in test_suites:
