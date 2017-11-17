@@ -180,7 +180,7 @@ def test_version(invoker_norec, isolated):
     invocation = invoker_norec('--version', isolated=isolated)
 
     assert invocation.result.exit_code == 0
-    assert 'labelord, version 0.3' in invocation.result.output
+    assert 'labelord, version 0.4' in invocation.result.output
 
 
 def test_precedence_template_repo(invoker, utils):
